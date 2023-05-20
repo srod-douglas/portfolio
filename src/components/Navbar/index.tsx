@@ -1,6 +1,6 @@
-import { useState } from "react";
-import useMedia from "use-media";
-import { userData } from "@/utils/userData";
+import { useState } from 'react';
+import useMedia from 'use-media';
+import { userData } from '@/utils/userData';
 
 import {
   Navbar as NavbarWrapper,
@@ -8,12 +8,13 @@ import {
   LogoTipoText,
   NavbarLinks,
   NavbarMobileArea,
-} from "./style";
+} from './style';
 
-import { FaBars } from "react-icons/fa";
-import { IoClose } from "react-icons/io5";
-import { Button } from "@/styles/Buttons";
-import { Container, Flex } from "@/styles/Global";
+import { FaBars } from 'react-icons/fa';
+import { IoClose } from 'react-icons/io5';
+import { Button } from '@/styles/Buttons';
+import { Container, Flex } from '@/styles/Global';
+import { UserImage } from '@/pages/home/style';
 
 export interface MenuButtonOpen {
   open: Boolean;
@@ -22,7 +23,7 @@ export interface MenuButtonOpen {
 
 export const NavBar = (): JSX.Element => {
 
-  const isWide = useMedia({ maxWidth: "991px" });
+  const isWide = useMedia({ maxWidth: '991px' });
 
   document.title = userData.nameUser;
 
@@ -37,13 +38,20 @@ export const NavBar = (): JSX.Element => {
       <Container>
         <NavbarMobileArea>
           <LogoTipo>
+          <UserImage
+                        src={`https://github.com/${userData.githubUser}.png`}
+                        alt={userData.nameUser}
+                        title={userData.nameUser}
+                        width={'48px'}
+                        height={'48px'}
+                        />
             <LogoTipoText>{userData.nameUser}</LogoTipoText>
           </LogoTipo>
           {isWide && (
             <Button
-              type="icon"
+              type='icon'
               onClick={OpenMenu}
-              aria-label={!open ? "Abrir Menu" : "Fechar Menu"}
+              aria-label={!open ? 'Abrir Menu' : 'Fechar Menu'}
             >
               {!open ? <FaBars /> : <IoClose />}
             </Button>
@@ -60,17 +68,20 @@ export const NavBar = (): JSX.Element => {
 export const NavLinks = (): JSX.Element => {
   return (
     <NavbarLinks>
-      <Button type="btLink" as="a" color="grey4" href={`#home`}>
-        Home
+      <Button type='btLink' as='a' color='grey4' href={`#home`}>
+        Início
       </Button>
-      <Button type="btLink" as="a" color="grey4" href={`#projects`}>
-        Projects
+      <Button type='btLink' as='a' color='grey4' href={`#about`}>
+        Quem sou
       </Button>
-      <Button type="btLink" as="a" color="grey4" href={`#contact`}>
-        Contact
+      <Button type='btLink' as='a' color='grey4' href={`#techs`}>
+        Tecnologias
       </Button>
-      <Button type="btLink" as="a" color="grey4" href={`#social-media`}>
-        Social Media
+      <Button type='btLink' as='a' color='grey4' href={`#projects`}>
+        Projetos
+      </Button>
+      <Button type='btLink' as='a' color='grey4' href={`#contact`}>
+        Contato
       </Button>
     </NavbarLinks>
   );
