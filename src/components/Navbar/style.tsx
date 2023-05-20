@@ -1,6 +1,5 @@
 import { styled } from "@/styles/stitches.config";
 import { Flex, Container } from "@/styles/Global";
-import { Button } from "@/styles/Buttons";
 
 export const Navbar = styled("nav", {
   background: "$grey0",
@@ -30,7 +29,7 @@ export const LogoTipoText = styled("span", {
   fontSize: "1.25rem",
   fontWeight: 600,
   color: "$grey4",
-  fontFamily: '"IBM Plex Sans"',
+  fontFamily: "IBM Plex Sans",
   "@mobile": {
     fontSize: "1rem",
   },
