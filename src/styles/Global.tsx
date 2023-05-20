@@ -71,7 +71,7 @@ export const globalStyles = globalCss({
   '*': {
     margin: 0,
     padding: 0,
-    fontFamily: ''Inter', sans-serif',
+    fontFamily: 'Inter, sans-serif',
     boxSizing: 'border-box',
   },
   html: {
@@ -115,8 +115,8 @@ export const GlobalStyle = ({ children }: GlobalStyleProps): JSX.Element => {
       sectionMobile: '4rem',
     },
     fonts: {
-      titles: ''IBM Plex Sans', sans-serif;',
-      texts: ''Inter', sans-serif',
+      titles: 'IBM Plex Sans, sans-serif',
+      texts: 'Inter, sans-serif',
     },
     fontSizes: {
       title1: '2.75rem',
