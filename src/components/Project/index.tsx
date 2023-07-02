@@ -5,12 +5,12 @@ import {
   ProjectStackTech,
   ProjectLink,
   ProjectLinks,
-} from "./style";
+} from './style';
 
-import { Text } from "@/styles/Text";
-import { useEffect, useState } from "react";
-import { FaGithub, FaShare } from "react-icons/fa";
-import { userData } from "@/utils/userData";
+import { Text } from '@/styles/Text';
+import { useEffect, useState } from 'react';
+import { FaGithub, FaShare } from 'react-icons/fa';
+import { userData } from '@/utils/userData';
 
 interface ReposType {
   id: number;
@@ -46,46 +46,46 @@ export const Project = (): JSX.Element => {
         repositories?.map?.((repository) => (
           <ProjectWrapper key={repository.id}>
             <ProjectTitle
-              as="h2"
-              type="heading3"
-              css={{ marginBottom: "$3" }}
-              color="grey4"
+              as='h2'
+              type='heading3'
+              css={{ marginBottom: '$3' }}
+              color='grey4'
             >
               {repository.name}
             </ProjectTitle>
 
             <ProjectStack>
-              <Text type="body2" color="grey2">
-                Primary Language:
+              <Text type='body2' color='grey2'>
+                Linguagem principal:
               </Text>
               {repository.language ? (
                 <ProjectStackTech>
-                  <Text color="grey2" type="body2">
+                  <Text color='grey2' type='body2'>
                     {repository.language}
                   </Text>
                 </ProjectStackTech>
               ) : (
                 <ProjectStackTech>
-                  <Text color="grey2" type="body2">
-                    Primary language not identified
+                  <Text color='grey2' type='body2'>
+                    Linguagem principal não disponível
                   </Text>
                 </ProjectStackTech>
               )}
             </ProjectStack>
 
-            <Text type="body1" color="grey2">
+            <Text type='body1' color='grey2'>
               {repository.description?.substring(0, 129)}
             </Text>
             <ProjectLinks>
-              <ProjectLink target="_blank" href={repository.html_url}>
-                <FaGithub /> Github Code
+              <ProjectLink target='_blank' href={repository.html_url}>
+                <FaGithub /> Repositório
               </ProjectLink>
               {repository.homepage && (
                 <ProjectLink
-                  target="_blank"
-                  href={`https://${repository.homepage}`}
+                  target='_blank'
+                  href={repository.homepage}
                 >
-                  <FaShare /> See demo
+                  <FaShare /> Ver deploy
                 </ProjectLink>
               )}
             </ProjectLinks>

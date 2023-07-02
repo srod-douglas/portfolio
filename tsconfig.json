@@ -10,7 +10,8 @@
       "@/styles/*": ["styles/*"],
       "@/pages/*": ["pages/*"],
       "@/public/*": ["public/*"],
-      "@/utils/*": ["utils/*"]
+      "@/utils/*": ["utils/*"],
+      "@/assets/*": ["assets/*"]
     },
     "skipLibCheck": true,
     "esModuleInterop": false,
