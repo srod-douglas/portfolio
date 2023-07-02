@@ -28,10 +28,10 @@ export const LogoTipo = styled(Flex, {
 export const LogoTipoText = styled('span', {
   fontSize: '1.25rem',
   fontWeight: 600,
-  color: "$grey4",
-  fontFamily: '"IBM Plex Sans"',
-  "@mobile": {
-    fontSize: "1rem",
+  color: '$grey4',
+  fontFamily: 'IBM Plex Sans',
+  '@mobile': {
+    fontSize: '1rem',
   },
 });
 

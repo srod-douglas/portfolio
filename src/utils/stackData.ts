@@ -1,9 +1,11 @@
 import { TbBrandNextjs } from 'react-icons/tb';
+
 import { SiPostgresql, SiTypescript, SiStyledcomponents, SiExpress, SiJirasoftware, SiFigma, SiTrello, SiJsonwebtokens, SiPrisma, SiNestjs, SiTailwindcss, SiInsomnia,
   SiVuetify } from 'react-icons/si';
 import { FaGit, FaPython } from 'react-icons/fa';
 import { DiDjango, DiScrum } from 'react-icons/di';
 import { BsFillKanbanFill } from 'react-icons/bs'
+
 
 import {
   FaHtml5,
